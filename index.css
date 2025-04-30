@@ -8,6 +8,8 @@
 body {
     background-color: #f9f9f9;
     color: #333;
+    box-shadow: #222 0px 0px 20px 0px;
+    font-size: 16px;
 }
 
 .container {
@@ -27,6 +29,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 999;
+
 }
 
 nav .logo h1 {
@@ -72,125 +75,233 @@ nav ul li i:hover {
 }
 
 
+/* Main Page Banner */
 .mainPage {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 0;
+    padding: 80px 50px;
+    background-color: #fef6f9;
+    flex-wrap: wrap;
+}
+
+.mainPage .text {
+    max-width: 600px;
 }
 
 .mainPage .text h2 {
     font-family: 'Courgette', cursive;
+    font-size: 28px;
     color: #ff4d6d;
-    font-size: 30px;
+}
+
+.mainPage .text .heads {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin: 10px 0;
 }
 
 .mainPage .text h1 {
-    font-size: 50px;
-    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
 }
 
 .mainPage .text p {
-    font-size: 18px;
-    color: #777;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
 }
 
-.mainPage button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    border: none;
+.mainPage .text button {
     background-color: #ff4d6d;
     color: white;
-    cursor: pointer;
+    border: none;
+    padding: 12px 25px;
     font-size: 16px;
-    border-radius: 5px;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.cardMen,
-.cardgirl {
-    margin: 50px 0;
+.mainPage .text button:hover {
+    background-color: #e63956;
 }
 
-.head h1 {
-    text-align: center;
+.mainPage img {
+    max-width: 500px;
+    width: 100%; 
+    height: auto; 
+    object-fit: contain;
+    margin-left: 100px;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: #333 0px 0px 20px 0px;
+
+
+}
+
+ /* Men's Wear Section */
+.cardMen {
+    padding: 60px 50px;
+    background-color: #fff;
+}
+
+.cardMen .head h1 {
     font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
 }
 
-.head h1 span {
+.cardMen .head h1 span {
     color: #ff4d6d;
 }
 
-.card {
+/* Card Container */
+.cardMen .card {
     display: flex;
-    justify-content: space-around;
+    gap: 30px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.crd {
-    background-color: white;
-    width: 300px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+/* Individual Card */
+.cardMen .crd {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
+.cardMen .crd:hover {
+    transform: scale(1.03);
+}
+
+.cardMen .crd img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+/* Text inside card */
+.cardMen .txt {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.cardMen .txt h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Stars */
+.cardMen .txt i {
+    color: #ffc107;
+    font-size: 16px;
+    margin: 0 1px;
+}
+
+/* Add to Cart Button */
+.cardMen .txt button {
+    margin-top: 10px;
+    background-color: #ff4d6d;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cardMen .txt button:hover {
+    background-color: #e63956;
+}
+
+/* Card Container */
+.card {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 50px;
+    background-color: #fdfdfd;
+}
+
+/* Individual Card */
+.crd {
+    background-color: #fefefe;
+    padding: 15px;
+    border-radius: 15px;
+    width: 280px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.crd:hover {
+    transform: scale(1.03);
+}
+
+/* Product Image */
 .crd img {
     width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
     cursor: pointer;
 }
 
+/* Card Text */
 .txt {
-    padding: 15px;
     text-align: center;
+    padding-top: 10px;
 }
 
 .txt h3 {
-    margin-bottom: 10px;
     font-size: 18px;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
 }
 
+/* Star Rating */
+.txt i {
+    color: #ffc107;
+    font-size: 16px;
+    margin: 0 1px;
+}
+
+/* Add to Cart Button */
 .txt button {
-    background-color: #ff4d6d;
-    color: white;
-    padding: 8px 15px;
+    margin-top: 10px;
+    background-color: #ff69b4; /* pink shade for a feminine touch */
+    color: #fff;
     border: none;
+    padding: 8px 18px;
+    font-size: 14px;
+    border-radius: 20px;
     cursor: pointer;
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.fullPage {
-    display: none;
-    flex-direction: row;
-    padding: 50px;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+.txt button:hover {
+    background-color: #e0559f;
 }
 
-.fullPage img {
-    width: 300px;
-    margin-right: 30px;
-}
-
-.cartText {
-    max-width: 600px;
-}
-
-.cartText h1,
-.cartText h2 {
-    margin: 10px 0;
-}
-
-.cartText button {
-    margin-right: 10px;
-    padding: 10px 15px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 .blogContent,
 .about,
